@@ -1,73 +1,28 @@
-/* 1. This centers everything on the screen */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+/* This targets the very first layer of the website */
+#root {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f2f5; /* Light grey background for the 'desk' */
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #e5e5e5; /* Distinct background to see the center */
+  margin: 0;
 }
 
-/* 2. The Wrapper that holds the phone */
 .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
 }
 
-/* 3. The Mobile Frame (The Phone) */
 .mobile-container {
   width: 375px;
   height: 812px;
   background-color: white;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-  border-radius: 30px; /* Gives it that phone shape */
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   overflow-y: auto;
   position: relative;
-  border: 8px solid #333; /* Dark border like a phone bezel */
-}
-
-/* 4. Formatting the text and buttons */
-:root {
-  --primary-purple: #6c25ff;
-  --light-purple: #cebafe;
-}
-
-.input-group {
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.input-group label {
-  position: absolute;
-  top: -10px;
-  left: 12px;
-  background: white;
-  padding: 0 5px;
-  font-size: 13px;
-  color: var(--primary-purple);
-  z-index: 1;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #dcdcdc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-.btn-primary {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--primary-purple);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
+  /* Prevent the phone from sticking to the top */
+  margin: auto; 
 }
