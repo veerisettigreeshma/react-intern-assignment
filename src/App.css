@@ -1,30 +1,42 @@
-:root {
-  --primary-purple: #6c25ff;
-  --light-purple: #cebafe;
-  --text-dark: #1d2226;
-  --text-gray: #6d6d6d;
-  --bg-white: #f7f8f9;
+/* 1. This centers everything on the screen */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5; /* Light grey background for the 'desk' */
 }
 
+/* 2. The Wrapper that holds the phone */
 .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
+/* 3. The Mobile Frame (The Phone) */
 .mobile-container {
   width: 375px;
   height: 812px;
   background-color: white;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  border-radius: 30px; /* Gives it that phone shape */
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 8px solid #333; /* Dark border like a phone bezel */
 }
 
-/* Custom Input Styling for the "on-border" label effect */
+/* 4. Formatting the text and buttons */
+:root {
+  --primary-purple: #6c25ff;
+  --light-purple: #cebafe;
+}
+
 .input-group {
   position: relative;
   margin-bottom: 25px;
@@ -54,17 +66,6 @@
   padding: 15px;
   background-color: var(--primary-purple);
   color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.btn-secondary {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--light-purple);
-  color: var(--text-dark);
   border: none;
   border-radius: 6px;
   font-weight: bold;

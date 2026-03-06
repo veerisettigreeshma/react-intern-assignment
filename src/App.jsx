@@ -39,23 +39,52 @@ const Login = () => {
 const Signup = () => {
   const navigate = useNavigate();
   return (
-    <div style={{ padding: '40px 20px' }}>
-      <h1>Create your PopX account</h1>
-      <div className="input-group" style={{ marginTop: '30px' }}>
+    <div style={{ padding: '30px 20px', display: 'flex', flexDirection: 'column', height: '100%' }}>
+      <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '30px' }}>Create your PopX account</h1>
+      
+      <div className="input-group">
         <label>Full Name*</label>
         <input type="text" defaultValue="Marry Doe" />
       </div>
+
       <div className="input-group">
         <label>Phone number*</label>
         <input type="text" defaultValue="Marry Doe" />
       </div>
-      {/* Add other fields similarly */}
-      <div style={{ marginBottom: '20px' }}>
-        <p style={{ fontSize: '14px', marginBottom: '10px' }}>Are you an Agency?*</p>
-        <label><input type="radio" name="agency" defaultChecked /> Yes</label>
-        <label style={{ marginLeft: '20px' }}><input type="radio" name="agency" /> No</label>
+
+      <div className="input-group">
+        <label>Email address*</label>
+        <input type="email" defaultValue="Marry Doe" />
       </div>
-      <button className="btn-primary" style={{ marginTop: '140px' }} onClick={() => navigate('/profile')}>Create Account</button>
+
+      <div className="input-group">
+        <label>Password *</label>
+        <input type="password" defaultValue="Marry Doe" />
+      </div>
+
+      <div className="input-group">
+        <label>Company name</label>
+        <input type="text" defaultValue="Marry Doe" />
+      </div>
+
+      <div style={{ marginBottom: '20px' }}>
+        <p style={{ fontSize: '14px', fontWeight: '500', marginBottom: '10px' }}>Are you an Agency?*</p>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <input type="radio" name="agency" defaultChecked style={{ accentColor: 'var(--primary-purple)' }} /> Yes
+          </label>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <input type="radio" name="agency" style={{ accentColor: 'var(--primary-purple)' }} /> No
+          </label>
+        </div>
+      </div>
+
+      {/* Spacing to push button to bottom */}
+      <div style={{ flexGrow: 1 }}></div>
+
+      <button className="btn-primary" onClick={() => navigate('/profile')}>
+        Create Account
+      </button>
     </div>
   );
 };
