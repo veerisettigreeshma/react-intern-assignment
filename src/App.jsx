@@ -70,21 +70,63 @@ const Signup = () => {
 
 // ... (Login and Profile components would go here, simplified for this step)
 const Login = () => <div style={{padding: '20px'}}><h1>Login Page</h1><button onClick={() => window.location.href='/profile'}>Login</button></div>;
-const Profile = () => <div style={{padding: '20px'}}><h1>Account Settings</h1><p>Marry Doe</p></div>;
-
-export default function App() {
+const Profile = () => {
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.mobileContainer}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Welcome />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
-        </Router>
+    <div style={{ background: '#f9f9f9', minHeight: '100%' }}>
+      {/* 1. Header with Border */}
+      <div style={{ 
+        padding: '25px 20px', 
+        backgroundColor: 'white', 
+        borderBottom: '1px solid #EAEAEA' 
+      }}>
+        <h3 style={{ margin: 0, fontWeight: '500', fontSize: '18px' }}>Account Settings</h3>
       </div>
+
+      {/* 2. Profile Info Section */}
+      <div style={{ padding: '30px 20px', display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div style={{ position: 'relative' }}>
+          {/* Circular Profile Image */}
+          <img 
+            src="https://i.pravatar.cc/100?img=32" // Using a placeholder that looks like the girl in screenshot
+            alt="profile" 
+            style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover' }} 
+          />
+          {/* Purple Camera Icon overlay */}
+          <div style={{ 
+            position: 'absolute', 
+            bottom: '0', 
+            right: '0', 
+            backgroundColor: '#6c25ff', 
+            borderRadius: '50%', 
+            width: '24px', 
+            height: '24px', 
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center',
+            border: '2px solid white'
+          }}>
+            <span style={{ color: 'white', fontSize: '12px' }}>📷</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style={{ margin: '0 0 5px 0', fontSize: '16px', fontWeight: 'bold' }}>Marry Doe</h4>
+          <p style={{ margin: 0, fontSize: '14px', color: '#1d2226' }}>Marry@Gmail.Com</p>
+        </div>
+      </div>
+
+      {/* 3. Description Text */}
+      <div style={{ padding: '0 20px 30px 20px', fontSize: '14px', color: '#1d2226', lineHeight: '1.6' }}>
+        Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
+      </div>
+
+      {/* 4. Dashed Line Divider */}
+      <div style={{ borderTop: '1px dashed #CBCBCB', margin: '0 20px' }}></div>
+      
+      {/* Bottom spacing to match the empty area in your screenshot */}
+      <div style={{ height: '400px', backgroundColor: '#f9f9f9' }}></div>
+      
+      <div style={{ borderTop: '1px dashed #CBCBCB', margin: '0 20px' }}></div>
     </div>
   );
-}
+};
