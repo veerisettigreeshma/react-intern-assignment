@@ -1,0 +1,72 @@
+:root {
+  --primary-purple: #6c25ff;
+  --light-purple: #cebafe;
+  --text-dark: #1d2226;
+  --text-gray: #6d6d6d;
+  --bg-white: #f7f8f9;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.mobile-container {
+  width: 375px;
+  height: 812px;
+  background-color: white;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Custom Input Styling for the "on-border" label effect */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: white;
+  padding: 0 5px;
+  font-size: 13px;
+  color: var(--primary-purple);
+  z-index: 1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-purple);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--light-purple);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
